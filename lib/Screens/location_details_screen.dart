@@ -1,57 +1,66 @@
-// ignore_for_file: library_private_types_in_public_api
-
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart'; // Import latlong2 for LatLng
+import 'routedetail.dart'; // Import the RouteDetailPage
 
 class LocationDetailsScreen extends StatefulWidget {
-  final String memberId;
+  final String name;
+  final double latitude;
+  final double longitude;
 
-  const LocationDetailsScreen({Key? key, required this.memberId}) : super(key: key);
+  const LocationDetailsScreen({
+    Key? key,
+    required this.name,
+    required this.latitude,
+    required this.longitude,
+  }) : super(key: key);
 
   @override
   _LocationDetailsScreenState createState() => _LocationDetailsScreenState();
 }
 
 class _LocationDetailsScreenState extends State<LocationDetailsScreen> {
-  // Hardcoded data for current location and visited locations
-  List<LatLng> visitedLocations = [
-    LatLng(51.5074, -0.1278), // London
-    LatLng(51.5075, -0.1279), // Nearby location in London
-    LatLng(51.5080, -0.1280), // Another location in London
-    LatLng(51.5090, -0.1290), // Another location in London
-  ];
-
-  List<String> locationTimeline = [
-    "51.5074, -0.1278 - 2024-11-28 08:00:00", // Sample locations with timestamps
-    "51.5075, -0.1279 - 2024-11-28 08:15:00",
-    "51.5080, -0.1280 - 2024-11-28 08:30:00",
-    "51.5090, -0.1290 - 2024-11-28 08:45:00",
-  ];
+  late LatLng currentLocation;
+  late List<LatLng> visitedLocations;
+  late List<String> locationTimeline;
 
   DateTime selectedDate = DateTime.now();
-
-  // Static current location
-  LatLng currentLocation = LatLng(51.5074, -0.1278); // London's coordinates
-
-  // Track selected paths
-  List<bool> selectedPaths = [false, false, false, false];
 
   @override
   void initState() {
     super.initState();
+
+    // Initialize currentLocation with passed latitude and longitude
+    currentLocation = LatLng(widget.latitude, widget.longitude);
+
+    // Sample locations to simulate travel
+    visitedLocations = [
+      currentLocation,
+      LatLng(widget.latitude + 0.01,
+          widget.longitude + 0.01), // Slightly northeast
+      LatLng(widget.latitude + 0.02,
+          widget.longitude - 0.01), // Slightly southeast
+      LatLng(widget.latitude - 0.01,
+          widget.longitude - 0.02), // Slightly southwest
+    ];
+
+    // Create a timeline based on visitedLocations
+    locationTimeline = [
+      '${visitedLocations[0].latitude}, ${visitedLocations[0].longitude} - ${DateTime.now().subtract(const Duration(minutes: 30))}',
+      '${visitedLocations[1].latitude}, ${visitedLocations[1].longitude} - ${DateTime.now().subtract(const Duration(minutes: 20))}',
+      '${visitedLocations[2].latitude}, ${visitedLocations[2].longitude} - ${DateTime.now().subtract(const Duration(minutes: 10))}',
+      '${visitedLocations[3].latitude}, ${visitedLocations[3].longitude} - ${DateTime.now()}',
+    ];
   }
 
-  // Method to filter locations by the selected date
+  // Filter locations by the selected date
   List<String> _filterLocationsByDate() {
-    return locationTimeline
-        .where((entry) {
-          final entryDate = DateTime.parse(entry.split(' - ')[1]);
-          return entryDate.year == selectedDate.year &&
-                 entryDate.month == selectedDate.month &&
-                 entryDate.day == selectedDate.day;
-        })
-        .toList();
+    return locationTimeline.where((entry) {
+      final entryDate = DateTime.parse(entry.split(' - ')[1]);
+      return entryDate.year == selectedDate.year &&
+          entryDate.month == selectedDate.month &&
+          entryDate.day == selectedDate.day;
+    }).toList();
   }
 
   @override
@@ -60,7 +69,9 @@ class _LocationDetailsScreenState extends State<LocationDetailsScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Location Details for Member: ${widget.memberId}'),
+        backgroundColor: const Color.fromARGB(255, 48, 29, 150),
+        title: const Text('TRACK LIVE LOCATION',
+            style: TextStyle(color: Colors.white)),
         actions: [
           IconButton(
             icon: const Icon(Icons.calendar_today),
@@ -84,39 +95,75 @@ class _LocationDetailsScreenState extends State<LocationDetailsScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            // Container with human icon and clickable text below AppBar and above map
+            Container(
+              padding: const EdgeInsets.all(16.0),
+              color: Colors.grey[200], // Background color for the container
+              child: Row(
+                children: [
+                  const Icon(
+                    Icons.person, // Human icon
+                    size: 30,
+                    color: Color.fromRGBO(98, 77, 227, 1), // Custom color
+                  ),
+                  const SizedBox(width: 10), // Space between the icon and text
+                  GestureDetector(
+                    onTap: () {
+                      // Handle the tap event (you can add your logic here)
+                      print("Tapped on ${widget.name}");
+                      // For example, navigate to another screen or show a message
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text('Tapped on ${widget.name}')),
+                      );
+                    },
+                    child: Text(
+                      widget.name, // Name passed from the list
+                      style: const TextStyle(
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black, // Change text color if needed
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
             // Map view with expanded space
             SizedBox(
-              height: 300, // Fix height of the map container
+              height: 300, // Fixed height for the map container
               child: FlutterMap(
                 options: MapOptions(
                   center: currentLocation, // Use the currentLocation
                   zoom: 15.0, // Set the zoom level
-                  minZoom: 10.0, // Optional, you can set the minimum zoom level
-                  maxZoom: 20.0, // Optional, you can set the maximum zoom level
+                  minZoom: 10.0, // Optional, minimum zoom level
+                  maxZoom: 20.0, // Optional, maximum zoom level
                 ),
                 children: [
                   TileLayer(
-                    urlTemplate: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                    urlTemplate:
+                        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                     subdomains: const ['a', 'b', 'c'],
                   ),
                   PolylineLayer(
-                    polylines: _getSelectedPolylines(),
-                  ),
-                  MarkerLayer(
-                    markers: [
-                      Marker(
-                        width: 80.0,
-                        height: 80.0,
-                        point: visitedLocations.first,
-                        builder: (ctx) => const Icon(Icons.play_arrow, color: Colors.green), // Start point
-                      ),
-                      Marker(
-                        width: 80.0,
-                        height: 80.0,
-                        point: visitedLocations.last,
-                        builder: (ctx) => const Icon(Icons.stop, color: Colors.red), // Stop point
+                    polylines: [
+                      Polyline(
+                        points: visitedLocations,
+                        strokeWidth: 4.0,
+                        color: Colors.blue,
                       ),
                     ],
+                  ),
+                  MarkerLayer(
+                    markers: visitedLocations
+                        .map((location) => Marker(
+                              width: 80.0,
+                              height: 80.0,
+                              point: location,
+                              builder: (ctx) => const Icon(Icons.location_on,
+                                  color: Colors.blue),
+                            ))
+                        .toList(),
                   ),
                 ],
               ),
@@ -138,22 +185,28 @@ class _LocationDetailsScreenState extends State<LocationDetailsScreen> {
                     return ListTile(
                       title: Text(location.split(' - ')[0]),
                       subtitle: Text(location.split(' - ')[1]),
-                    );
-                  }).toList(),
-                  const SizedBox(height: 20),
-                  const Text('Select Paths to Display:'),
-                  // Allow user to select paths
-                  ...List.generate(visitedLocations.length, (index) {
-                    return CheckboxListTile(
-                      title: Text('Path ${index + 1}'),
-                      value: selectedPaths[index],
-                      onChanged: (bool? value) {
-                        setState(() {
-                          selectedPaths[index] = value!;
-                        });
+                      onTap: () {
+                        // When a route is tapped, navigate to RouteDetailPage
+                        int index = filteredTimeline.indexOf(location);
+                        if (index != -1) {
+                          List<LatLng> selectedRoute = [
+                            visitedLocations[index],
+                            visitedLocations[index + 1]
+                          ];
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => RouteDetailPage(
+                                name: widget.name, // Pass the name
+                                routeLocations:
+                                    selectedRoute, // Pass the routeLocations
+                              ),
+                            ),
+                          );
+                        }
                       },
                     );
-                  }),
+                  }).toList(),
                 ],
               ),
             ),
@@ -161,20 +214,5 @@ class _LocationDetailsScreenState extends State<LocationDetailsScreen> {
         ),
       ),
     );
-  }
-
-  // Method to get selected polylines based on the selected paths
-  List<Polyline> _getSelectedPolylines() {
-    List<Polyline> polylines = [];
-    for (int i = 0; i < visitedLocations.length - 1; i++) {
-      if (selectedPaths[i]) {
-        polylines.add(Polyline(
-          points: [visitedLocations[i], visitedLocations[i + 1]],
-          strokeWidth: 4.0,
-          color: Colors.blue,
-        ));
-      }
-    }
-    return polylines;
   }
 }
