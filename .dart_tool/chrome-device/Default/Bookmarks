@@ -1,5 +1,5 @@
 {
-   "checksum": "1761c72261296b8c0849b4757193b5a9",
+   "checksum": "6d437307ca52b58e5f2cbd87cbdf1512",
    "roots": {
       "bookmark_bar": {
          "children": [ {
@@ -8,107 +8,79 @@
             "guid": "9ac58b4c-d385-4643-afce-ba55639c85bc",
             "id": "14",
             "name": "*Engg Science Course B.Tech 2nd Year (AICTE Model Curriculum)2019-20.pdf",
-            "show_icon": false,
-            "source": "sync",
             "type": "url",
-            "url": "https://aktu.ac.in/pdf/syllabus/syllabus1920/Engg%20Science%20Course%20B.Tech%202nd%20Year%20(AICTE%20Model%20Curriculum)2019-20.pdf",
-            "visit_count": 0
+            "url": "https://aktu.ac.in/pdf/syllabus/syllabus1920/Engg%20Science%20Course%20B.Tech%202nd%20Year%20(AICTE%20Model%20Curriculum)2019-20.pdf"
          }, {
             "date_added": "13292177989124411",
             "date_last_used": "13368978957864544",
             "guid": "537243ef-643c-4783-9d03-ca9cb67303fd",
             "id": "15",
             "name": "Gmail",
-            "show_icon": false,
-            "source": "sync",
             "type": "url",
-            "url": "https://accounts.google.com/b/0/AddMailService",
-            "visit_count": 0
+            "url": "https://accounts.google.com/b/0/AddMailService"
          }, {
             "date_added": "13292177989129405",
             "date_last_used": "0",
             "guid": "28a27bde-ee4b-46e2-bab2-a96281af4b9a",
             "id": "16",
             "name": "Maps",
-            "show_icon": false,
-            "source": "sync",
             "type": "url",
-            "url": "https://maps.google.com/",
-            "visit_count": 0
+            "url": "https://maps.google.com/"
          }, {
             "date_added": "13292177989127864",
             "date_last_used": "0",
             "guid": "f1800e27-e039-4866-8868-2135b9f5fdba",
             "id": "17",
             "name": "YouTube",
-            "show_icon": false,
-            "source": "sync",
             "type": "url",
-            "url": "https://youtube.com/",
-            "visit_count": 0
+            "url": "https://youtube.com/"
          }, {
             "date_added": "13292177991798892",
             "date_last_used": "0",
             "guid": "1f07fcc7-fbad-4c51-9b86-3f1353a3c6ee",
             "id": "18",
             "name": "News",
-            "show_icon": false,
-            "source": "sync",
             "type": "url",
-            "url": "https://news.google.com/",
-            "visit_count": 0
+            "url": "https://news.google.com/"
          }, {
             "date_added": "13292177991159018",
             "date_last_used": "0",
             "guid": "77ecc11a-612c-4098-8f41-115423ca5cf0",
             "id": "19",
             "name": "Translate",
-            "show_icon": false,
-            "source": "sync",
             "type": "url",
-            "url": "https://translate.google.com/",
-            "visit_count": 0
+            "url": "https://translate.google.com/"
          }, {
             "date_added": "13285683240530878",
             "date_last_used": "0",
             "guid": "3726d59d-c1b4-4c2d-a783-044e8c9bcda8",
             "id": "20",
             "name": "SarkariResult.com",
-            "show_icon": false,
-            "source": "sync",
             "type": "url",
-            "url": "https://www.sarkariresult.com/",
-            "visit_count": 0
+            "url": "https://www.sarkariresult.com/"
          }, {
             "date_added": "13328177394116394",
             "date_last_used": "0",
             "guid": "2cbf1632-93f0-4f09-8f24-4affd8da60da",
             "id": "21",
             "name": "Hardik' resume.pdf",
-            "show_icon": false,
-            "source": "sync",
             "type": "url",
-            "url": "file:///C:/Users/Hardik%20Sharma/Downloads/Hardik'%20resume.pdf",
-            "visit_count": 0
+            "url": "file:///C:/Users/Hardik%20Sharma/Downloads/Hardik'%20resume.pdf"
          }, {
             "date_added": "13329646429222920",
             "date_last_used": "0",
             "guid": "e7ef0d82-73ff-47a7-b910-5f1e9e148601",
             "id": "22",
             "name": "仕事探し | Indeed (インディード)",
-            "show_icon": false,
-            "source": "sync",
             "type": "url",
-            "url": "https://jp.indeed.com/",
-            "visit_count": 0
+            "url": "https://jp.indeed.com/"
          } ],
          "date_added": "13377255552629673",
          "date_last_used": "0",
          "date_modified": "13329646429222920",
          "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
          "id": "1",
-         "name": "Favorites bar",
-         "source": "unknown",
+         "name": "Bookmarks bar",
          "type": "folder"
       },
       "other": {
@@ -118,30 +90,23 @@
             "guid": "c4e9ecce-cb66-4c0f-8451-5146d21e8f93",
             "id": "12",
             "name": "harshitsharma7017",
-            "show_icon": false,
-            "source": "sync",
             "type": "url",
-            "url": "https://github.com/harshitsharma7017",
-            "visit_count": 0
+            "url": "https://github.com/harshitsharma7017"
          }, {
             "date_added": "13371400906426233",
             "date_last_used": "0",
             "guid": "29b001b4-4361-4a70-be22-a3f6d25da1b6",
             "id": "13",
             "name": "ChatGPT",
-            "show_icon": false,
-            "source": "sync",
             "type": "url",
-            "url": "https://chatgpt.com/",
-            "visit_count": 0
+            "url": "https://chatgpt.com/"
          } ],
          "date_added": "13377255552629678",
          "date_last_used": "0",
          "date_modified": "13371400906426233",
          "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
          "id": "2",
-         "name": "Other favorites",
-         "source": "unknown",
+         "name": "Other bookmarks",
          "type": "folder"
       },
       "synced": {
@@ -151,77 +116,57 @@
             "guid": "56afccda-5a88-40b1-bb49-7acfa62d3bb6",
             "id": "6",
             "name": "New tab",
-            "show_icon": false,
-            "source": "sync",
             "type": "url",
-            "url": "chrome://newtab/",
-            "visit_count": 0
+            "url": "chrome://newtab/"
          }, {
             "date_added": "13260649468440419",
             "date_last_used": "0",
             "guid": "f51d0464-4807-403a-b923-73d1506a4d05",
             "id": "7",
             "name": "Home - YouTube",
-            "show_icon": false,
-            "source": "sync",
             "type": "url",
-            "url": "https://m.youtube.com/",
-            "visit_count": 0
+            "url": "https://m.youtube.com/"
          }, {
             "date_added": "13260649693312005",
             "date_last_used": "0",
             "guid": "f529faa5-7f2b-466d-a77e-aef08b513368",
             "id": "8",
             "name": "SarkariResult.com : Sarkari Results, Latest Online Form | Result 2021",
-            "show_icon": false,
-            "source": "sync",
             "type": "url",
-            "url": "https://www.sarkariresult.com/",
-            "visit_count": 0
+            "url": "https://www.sarkariresult.com/"
          }, {
             "date_added": "13260649720671930",
             "date_last_used": "0",
             "guid": "ac473d47-cf1a-417f-928c-bc4583680e4b",
             "id": "9",
             "name": "The world's best Caller ID & Spam Blocking app | Truecaller",
-            "show_icon": false,
-            "source": "sync",
             "type": "url",
-            "url": "https://www.truecaller.com/",
-            "visit_count": 0
+            "url": "https://www.truecaller.com/"
          }, {
             "date_added": "13267444944771366",
             "date_last_used": "0",
             "guid": "b8ab32d5-ffe5-42b0-985c-2c5b50e91c76",
             "id": "10",
             "name": "Exam AZ-900: Microsoft Azure Fundamentals - Learn | Microsoft Docs",
-            "show_icon": false,
-            "source": "sync",
             "type": "url",
-            "url": "https://docs.microsoft.com/en-us/learn/certifications/exams/az-900",
-            "visit_count": 0
+            "url": "https://docs.microsoft.com/en-us/learn/certifications/exams/az-900"
          }, {
             "date_added": "13269076190148194",
             "date_last_used": "0",
             "guid": "0191b933-889f-41c0-8a26-6301489a4b1a",
             "id": "11",
             "name": "WhatsApp",
-            "show_icon": false,
-            "source": "sync",
             "type": "url",
-            "url": "https://web.whatsapp.com/",
-            "visit_count": 0
+            "url": "https://web.whatsapp.com/"
          } ],
          "date_added": "13377255552629680",
          "date_last_used": "0",
          "date_modified": "13269076190148194",
          "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
          "id": "3",
-         "name": "Mobile favorites",
-         "source": "unknown",
+         "name": "Mobile bookmarks",
          "type": "folder"
       }
    },
-   "sync_metadata": "CkEKHgiIgQISCGLx1XGTAQAAKg4QABgBIAAoBTAAOABAABIAKhh4ZFp6TmU3bnpidFUyZmVRZ05iaWRRPT1IA6AGDBKtAQgWEqgBChxVdGhBbmYrUk5KMUo3TVVNb2ZsVURZeHR6bms9EiRlN2VmMGQ4Mi03M2ZmLTQ3YTctYjkxMC01ZjFlOWUxNDg2MDEYACAAKAAwzPyC4YUxOOP8guGFMUDj/ILhhTFKHDhyU0pkL1hJQzYvTFFSK2xwWVN2ckU4ZVZTaz1aHyId/VZWcXdHZE90MWp3bDhBbFJSQWxBLzhGRTRHRT1l7RzdJ8I+AmAFEq0BCBISqAEKHHl6TEdlcUtoekF1K0UyK3FGeC9EZllhS1d1WT0SJDFmMDdmY2M3LWZiYWQtNGM1MS05Yjg2LTNmMTM1M2EzYzZlZRgAIAAoADDhm7a0/jA4kdjyyIUwQJHY8siFMEocTDdKalJ4aVpRZzlHcGNoSXNQa0JvTDU3dE40PVofIh3dMWxLbDNHenAzMG1CV2I4WldpdktZRmtUMFJJPWVd9VIKwj4CYAUSrQEIERKoAQocclVReGpRT3Vnemp0My9hUGF1ZnFxQTBZaFBnPRIkZjE4MDBlMjctZTAzOS00ODY2LTg4NjgtMjEzNWI5ZjVmZGJhGAAgACgAMOCbtrT+MDi92fLIhTBAvdnyyIUwShxpTVRBSzQ1NXhYc0lTRzg1TUQ0Szd1Tmxvb3c9Wh8iHbpwZkVEMS8vbWhlSmNZYXg5MjhCUDJ4ZnYrZ2M9ZTj5OTPCPgJgBRKsAQgQEqcBChxqYi8wVjR5NHUzS21WVW8rTU1lMXE1TmpDYkU9EiQyOGEyN2JkZS1lZTRiLTQ2ZTItYmFiMi1hOTYyODFhZjRiOWEYACAAKAAw35u2tP4wOKHY8siFMECh2PLIhTBKHFY4KzdjM3h3VzN3QWc4TUlwS1VTNzFpaU4vZz1aHiIcdDQ3a1IxQ3IvZlovMHFIZ2pXOHVTVmZtREtjPWU9bIURwj4CYAUSrAEIDxKnAQocTE54M01YV0FZaithUWxLVGNseStwVXZCb0tnPRIkNTM3MjQzZWYtNjQzYy00NzgzLTlkMDMtY2E5Y2I2NzMwM2ZkGAAgACgAMMGJnqSYMjjA2PLIhTBAwNjyyIUwShxoWE81R2JFT0tTM0RmQXEzT09QQVg4ZnpXbG89Wh4iHFkvRkpERU5UOW1oV2dSR0tPc2YyRVo2M09GMD1lmz2FtsI+AmAFEq0BCBMSqAEKHHZxSjdzTU40SGw1aFdsNzRkMUpTbms5UTF4ST0SJDc3ZWNjMTFhLTYxMmMtNDA5OC04ZjQxLTExNTQyM2NhNWNmMBgAIAAoADDim7a0/jA479jyyIUwQO/Y8siFMEocdmtPa0xXQy83UnJ3OFF6UGlnMXBhVjJHczlVPVofIh3uS3ZWWGRhaFYxN09XSHBmY0U4djJvNE5idTBzPWXFz5ABwj4CYAUSrAEIDBKnAQocTlFzb08xeHMyR2R3SUdDeWxOY25OSElQVTJnPRIkYzRlOWVjY2UtY2I2Ni00YzBmLTg0NTEtNTE0NmQyMWU4ZjkzGAAgACgAMITn2KK1MjjZ6diitTJA2enYorUyShx2UjBPTjJNVGJZN1p3Z09rOUhEVlU2QktUaW89Wh4iHFV6MjBXNEgvZXFIZFZGR0xoZDgyeXVXTkdaVT1lX8Sk9cI+AmAFEo4BCAESiQEKHHl4Si82ZnZrZWNyN2twNUVRekI0dFdMcGRiRT0SJDJjNGQwN2ZiLTFhYWYtNWM4ZS05M2UzLWFjODZhMTI0NmZmYxgAIAAoADDm5byNsTA477jyyIUwQO+48siFMEocYVJDV0xnaEY5YjVJbnFLSUR2dUovanZRa0ZjPVoAZQAAAADCPgJgABKtAQgUEqgBChxCUFU5aFJtOTF0RCtkd1JlY0ZxbWZrZ0h4Z2c9EiQzNzI2ZDU5ZC1jMWI0LTRjMmQtYTc4My0wNDRlOGM5YmNkYTgYACAAKAAw45u2tP4wOLDY8siFMECw2PLIhTBKHEJXTFdOUXNQT1pIZDZhVGlEWWRkV3IyWGpIZz1aHyId91lsWXBjWVB0UjFra0k2WTJ2UERaNnd2TUE0WT1lyWH4NsI+AmAFEqwBCA0SpwEKHDdHZmplOXhsYks4dHNvVy9sVnlSS3k0RGVtST0SJDI5YjAwMWI0LTQzNjEtNGE3MC1iZTIyLWEzZjZkMjVkYTFiNhgAIAAoADCF59iitTI4++nYorUyQPvp2KK1MkocVEJTZkxWeDVKeThaMDRKRnN5MXRQNFZpaUxJPVoeIhxxNmp0aXpiSXUzL01Kb1JYaEt4eFJEWFFGMWs9ZWkCeuPCPgJgBRKOAQgCEokBChxZY1NUb252RVNQd3FDczRMMmNyVmh2NjhMOTg9EiQ0NzFhODYwYi1lOTg1LTUzNTEtOTIyMy1mZjhjMTI2ZjE3MWYYACAAKAAw5uW8jbEwOP+48siFMED/uPLIhTBKHG9QVmtod0JSYlY2NUtDV1IyK0lPTkhXb091OD1aAGUAAAAAwj4CYAASrQEICxKoAQocOVZibVk2SDJlUWlzcmxUNitrNWdPeE94QzhZPRIkMDE5MWI5MzMtODg5Zi00MWMwLThhMjYtNjMwMTQ4OWE0YjFhGAAgACgAMLGHs5WOMTjy1/LIhTBA8tfyyIUwShxJSFZoODJUN3Vvbm44cTAvYkdMVXpuaXlNSXc9Wh8iHfdWc21DRkpRN0pNNEErbUZMUExQRUNIaFZrK1E9ZeXyZLPCPgJgBRKtAQgVEqgBChxSa1g0NFNyU3YwRytXRUhzWWhERnhhdVZwaTg9EiQyY2JmMTYzMi05M2YwLTRmMDktOGYyNC00YWZmZDhkYTYwZGEYACAAKAAw+9DEpIAxOKvRxKSAMUCr0cSkgDFKHGtQOFpteVFzaDVhYXpZTk5rRDNZM2FpRXlWcz1aHyId+2tPNUMxY0I3blhlMC9LcnlNZzBLM3RWR0NSQT1ld3Bso8I+AmAFEqwBCAcSpwEKHEV1TFZPekhJcXhOZ0ZJMElIOGxBK0lqVktxbz0SJGY1MWQwNDY0LTQ4MDctNDAzYS1iOTIzLTczZDE1MDZhNGQwNRgAIAAoADCema/U/S84zdnyyIUwQM3Z8siFMEocWWdDbmE2c0tYVXFUOUVXZ2pjeWw5eGtzcUtrPVoeIhx3S2w5ZG5OZVc5TjBJMStNbFQ5Unh1bHlKYk09ZQAAAADCPgJgBRKtAQgIEqgBChwvVEV5bGNPNHdmby9NRytCSXlFazh4YzFBdU09EiRmNTI5ZmFhNS03ZjJiLTQ2NmQtYTc3ZS1hZWYwOGI1MTMzNjgYACAAKAAw3Zu2tP4wOOzZ8siFMEDs2fLIhTBKHEZrdWRMZmtrNVdLcTJWQTVQa0xldjRkQUFyMD1aHyIdu1M5Qm85NHlNNTc1YTB3WkRSQTZSczJRRDNRND1lyWH4NsI+AmAFEqwBCAYSpwEKHDBYWHhDSkhrTHozVmZZbmFSMUhRaWJNbTlyQT0SJDU2YWZjY2RhLTVhODgtNDBiMS1iYjQ5LTdhY2ZhNjJkM2JiNhgAIAAoADCema/U/S8439jyyIUwQN/Y8siFMEocNklKWkJRaXRQY2ZrRmhXUlFkcTFjcTRPYWowPVoeIhwrYXhhUGl0T04xMjcxVXVac2VRTDhkVk1SQ2M9ZQAAAADCPgJgBRKsAQgOEqcBChxmV2ZnenZ1KzNXWUdvRXEzUGNPbDQwQWJmdVU9EiQ5YWM1OGI0Yy1kMzg1LTQ2NDMtYWZjZS1iYTU1NjM5Yzg1YmMYACAAKAAw3Ju2tP4wOL/T8siFMEC/0/LIhTBKHCtBUTcvWGN4cjgya1c1MW1CbVpaV3RIblNUND1aHiIcQkF6YUVWVDFsb2NzUGJzVlBwYTB3dUVtVlJvPWVPs1uqwj4CYAUSrQEICRKoAQocb3lSSkJzYUJSWlNwdDhObWZyZDJnWjNEWm93PRIkYWM0NzNkNDctY2YxYS00MTdmLTkyOGMtYmM0NTgzNjgwZTRiGAAgACgAMJ6Zr9T9LziO2fLIhTBAjtnyyIUwShxpaEJ3MVkyQUxHUGJKUis2bmRpcXdnUjVuQ1E9Wh8iHd1waFpYWnZRTnEyNHhFekN3bGhlN1lIRVEvc3c9ZQAAAADCPgJgBRKtAQgKEqgBChw2eGtqMkdMRUZJZGFyc1o3VzYzUjNPRHpnZHc9EiRiOGFiMzJkNS1mZmU1LTQyYjAtOTg1Yy0yYzViNTBlOTFjNzYYACAAKAAwnpmv1P0vOK3Z8siFMECt2fLIhTBKHEhIckduSUNlN1NyZWkvTmlvZHp3VVh2MkdaRT1aHyId7kV3RTYwSzd2dkZEU01TbzhmK28wd0FyUEs0QT1lAAAAAMI+AmAFEo4BCAMSiQEKHG5qZ0R1ODhlQ3J2WHA4NnBEN2ZIR2NxRnA4OD0SJGE5Y2NlNTQ1LTk4ZmItNTg5Zi05NGJkLWY4NzFkNmQxZmUwYRgAIAAoADDm5byNsTA4rrnyyIUwQK658siFMEoceXpOQjAxY241NEE3Y1JVMHVUKy9QZ21UdFVvPVoAZQAAAADCPgJgADAAOAA=",
    "version": 1
 }
