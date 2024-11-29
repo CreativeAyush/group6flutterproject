@@ -1,9 +1,13 @@
-2024/11/28-20:30:28.265 5060 Reusing MANIFEST C:\Users\pcmwa\AppData\Local\Temp\flutter_tools.c1d6bb79\flutter_tools_chrome_device.abd92be\Default\Site Characteristics Database/MANIFEST-000001
-2024/11/28-20:30:28.273 51e8 Compacting 4@0 + 0@1 files
-2024/11/28-20:30:28.283 51e8 Generated table #11@0: 2 keys, 194 bytes
-2024/11/28-20:30:28.284 51e8 Compacted 4@0 + 0@1 files => 194 bytes
-2024/11/28-20:30:28.285 51e8 compacted to: files[ 0 1 0 0 0 0 0 ]
-2024/11/28-20:30:28.286 51e8 Delete type=2 #4
-2024/11/28-20:30:28.286 51e8 Delete type=2 #6
-2024/11/28-20:30:28.286 51e8 Delete type=2 #7
-2024/11/28-20:30:28.286 51e8 Delete type=2 #8
+2024/11/29-09:29:59.467 3900 Reusing MANIFEST C:\Users\pcmwa\AppData\Local\Temp\flutter_tools.3d2aba82\flutter_tools_chrome_device.462fa5e9\Default\Site Characteristics Database/MANIFEST-000001
+2024/11/29-09:29:59.469 3900 Recovering log #3
+2024/11/29-09:29:59.469 3900 Level-0 table #13: started
+2024/11/29-09:29:59.477 3900 Level-0 table #13: 226 bytes OK
+2024/11/29-09:29:59.479 3900 Recovering log #6
+2024/11/29-09:29:59.480 3900 Level-0 table #14: started
+2024/11/29-09:29:59.482 3900 Level-0 table #14: 196 bytes OK
+2024/11/29-09:29:59.483 3900 Recovering log #10
+2024/11/29-09:29:59.483 3900 Reusing old log C:\Users\pcmwa\AppData\Local\Temp\flutter_tools.3d2aba82\flutter_tools_chrome_device.462fa5e9\Default\Site Characteristics Database/000010.log 
+2024/11/29-09:29:59.489 3900 Delete type=0 #3
+2024/11/29-09:29:59.490 3900 Delete type=2 #4
+2024/11/29-09:29:59.490 3900 Delete type=2 #6
+2024/11/29-09:29:59.490 3900 Delete type=0 #6

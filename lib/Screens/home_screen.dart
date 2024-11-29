@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import '../main.dart';
 import 'package:intl/intl.dart';
-import 'location_details_screen.dart';
-import 'custom_drawer.dart';
-import 'show_map.dart';
-
+import 'location_details_screen.dart'; // Import the LocationDetailsScreen
+import 'custom_drawer.dart'; // Import CustomDrawer
+import 'show_map.dart'; // Import ShowMap
+import 'memberspage.dart'; // Import MembersPage
+import 'livelocation.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-  
 
   @override
   Widget build(BuildContext context) {
@@ -48,41 +47,39 @@ class HomeScreen extends StatelessWidget {
       {
         'name': 'Anjali Tyagi',
         'id': 'WSL0054',
-        'latitude': 37.7830,
-        'longitude': -122.4170,
         'status': '',
         'inTime': '09:30 am',
         'outTime': '06:40 pm',
         'avatarUrl': 'https://via.placeholder.com/50',
         'statusColor': Colors.grey,
+        'latitude': 37.7830,
+        'longitude': -122.4170,
       },
     ];
+
     return Scaffold(
-      appBar: _buildAppBar(context), // Pass context for opening the drawer
+      appBar: _buildAppBar(context),
       drawer: CustomDrawer(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _buildFilterBar(),
+          _buildFilterBar(context),
           Expanded(
-            child: _buildAttendanceList(),
+            child: _buildAttendanceList(attendanceData),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextButton(
               onPressed: () {
-  Navigator.push(
-    context,
-    MaterialPageRoute(
-      builder: (context) => ShowMap(
-        members: attendanceData, // Pass the list of member data
-      ),
-    ),
-  );
-},
-
-  
-              
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ShowMap(
+                      members: attendanceData, // Pass the list of member data
+                    ),
+                  ),
+                );
+              },
               child: const Text(
                 "Show Map View",
                 style: TextStyle(
@@ -101,9 +98,7 @@ class HomeScreen extends StatelessWidget {
     return AppBar(
       title: const Text(
         'ATTENDANCE',
-        style: TextStyle(
-          color: Colors.white,
-        ),
+        style: TextStyle(color: Colors.white),
       ),
       iconTheme: const IconThemeData(
         color: Colors.white, // Set the hamburger icon color to white
@@ -124,61 +119,23 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  // Widget _buildDrawer() {
-  //   return Drawer(
-  //     child: ListView(
-  //       padding: EdgeInsets.zero,
-  //       children: [
-  //         DrawerHeader(
-  //           decoration: BoxDecoration(
-  //             color: Colors.blue,
-  //           ),
-  //           child: Text(
-  //             'Menu',
-  //             style: TextStyle(
-  //               color: Colors.white,
-  //               fontSize: 24,
-  //             ),
-  //           ),
-  //         ),
-  //         ListTile(
-  //           leading: Icon(Icons.home),
-  //           title: Text('Home'),
-  //           onTap: () {
-  //             // Close the drawer
-  //           },
-  //         ),
-  //         ListTile(
-  //           leading: Icon(Icons.settings),
-  //           title: Text('Settings'),
-  //           onTap: () {
-  //             // Close the drawer
-  //           },
-  //         ),
-  //       ],
-  //     ),
-  //   );
-  // }
-
-  Widget _buildFilterBar() {
+  Widget _buildFilterBar(BuildContext context) {
     final String currentDate =
         DateFormat('EEE, MMM dd yyyy').format(DateTime.now());
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // Full-width grey background
         Container(
-          width: double.infinity, // Full width
-          color: Colors.grey.shade200, // Grey background color
+          width: double.infinity, 
+          color: Colors.grey.shade200, 
           padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
                 children: [
-                  // Circular boundary around the icon
                   Container(
-                    padding: const EdgeInsets.all(8), // Adjust padding for size
+                    padding: const EdgeInsets.all(8),
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Color(0xffb3c1f1),
@@ -186,9 +143,19 @@ class HomeScreen extends StatelessWidget {
                     child: const Icon(Icons.group, color: Colors.white),
                   ),
                   const SizedBox(width: 8),
-                  const Text(
-                    'All Members',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const MembersPage(),
+                        ),
+                      );
+                    },
+                    child: const Text(
+                      'All Members',
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                    ),
                   ),
                 ],
               ),
@@ -208,103 +175,37 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
-        // Add spacing between rows
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               IconButton(
-                icon: const Icon(Icons.arrow_left,
-                    color: Colors.blue), // Customize color if needed
-                onPressed: () {
-                  // Action for left arrow click
-                },
+                icon: const Icon(Icons.arrow_left, color: Colors.blue),
+                onPressed: () {},
               ),
               Text(
                 currentDate,
-                style:
-                    const TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
               ),
               IconButton(
-                icon: const Icon(Icons.arrow_right,
-                    color: Colors.blue), // Customize color if needed
-                onPressed: () {
-                  // Action for left arrow click
-                },
+                icon: const Icon(Icons.arrow_right, color: Colors.blue),
+                onPressed: () {},
               ),
-              const SizedBox(
-                width: 15,
-              ),
+              const SizedBox(width: 15),
               IconButton(
-                icon: const Icon(Icons.calendar_today,
-                    color: Colors.grey), // Customize color if needed
-                onPressed: () {
-                  // Action for left arrow click
-                },
+                icon: const Icon(Icons.calendar_today, color: Colors.grey),
+                onPressed: () {},
               ),
             ],
           ),
         ),
-        const Divider(
-          color: Colors.grey, // Line color
-          height: 1, // Line thickness
-          thickness: 1, // Line thickness
-          indent: 16, // Indentation from the left
-          endIndent: 16, // Indentation from the right
-        ),
+        const Divider(color: Colors.grey, height: 1, thickness: 1, indent: 16, endIndent: 16),
       ],
     );
   }
 
-  Widget _buildAttendanceList() {
-    final List<Map<String, dynamic>> attendanceData = [
-      {
-        'name': 'Ayush Yadav',
-        'id': 'WSL0003',
-        'status': '',
-        'inTime': '09:30 am',
-        'outTime': '07:45 pm',
-        'avatarUrl': '',
-        'statusColor': Colors.green,
-        'latitude': 37.7830,
-        'longitude': -122.4170,
-      },
-      {
-        'name': 'Ayush Sharma',
-        'id': 'WSL0034',
-        'status': '',
-        'inTime': '09:30 am',
-        'outTime': '06:40 pm',
-        'avatarUrl': 'https://via.placeholder.com/50',
-        'statusColor': Colors.orange,
-        'latitude': 37.7830,
-        'longitude': -122.4170,
-      },
-      {
-        'name': 'Harshit Sharma',
-        'id': 'WSL0054',
-        'status': 'Working',
-        'inTime': null,
-        'outTime': null,
-        'avatarUrl': 'https://via.placeholder.com/50',
-        'statusColor': Colors.green,
-        'latitude': 37.7830,
-        'longitude': -152.4170,
-      },
-      {
-        'name': 'Anjali Tyagi',
-        'id': 'WSL0054',
-        'latitude': 37.7830,
-        'longitude': -122.4170,
-        'status': '',
-        'inTime': '09:30 am',
-        'outTime': '06:40 pm',
-        'avatarUrl': 'https://via.placeholder.com/50',
-        'statusColor': Colors.grey,
-      },
-    ];
-
+  Widget _buildAttendanceList(List<Map<String, dynamic>> attendanceData) {
     return ListView.builder(
       itemCount: attendanceData.length,
       itemBuilder: (context, index) {
@@ -314,136 +215,91 @@ class HomeScreen extends StatelessWidget {
             ListTile(
               onTap: () {
                 Navigator.push(
-  context,
-  MaterialPageRoute(
-    builder: (context) => LocationDetailsScreen(
-      name: item['name'],
-      latitude: item['latitude'],
-      longitude: item['longitude'],
-    ),
-  ),
-);
-
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LocationDetailsScreen(
+                      name: item['name'],
+                      latitude: item['latitude'],
+                      longitude: item['longitude'],
+                    ),
+                  ),
+                );
               },
-              leading: const CircleAvatar(
-                backgroundColor:
-                    Color(0xffb3c1f1), // Background color for the circle
-                child: Icon(
-                  Icons.person,
-                  color: Colors.white, // Icon color
-                  size: 24, // Icon size
-                ),
+              leading: CircleAvatar(
+                backgroundColor: item['statusColor'],
+                child: const Icon(Icons.person, color: Colors.white),
               ),
               title: Text(
                 '${item['name']} (${item['id']})',
                 style: const TextStyle(fontWeight: FontWeight.bold),
               ),
               subtitle: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (item['inTime'] != null)
                     Row(
                       children: [
-                        const Icon(Icons.arrow_upward,
-                            color: Colors.green, size: 16),
+                        const Icon(Icons.arrow_upward, color: Colors.green, size: 16),
                         const SizedBox(width: 4),
-                        Text(
-                          item['inTime'],
-                          style: const TextStyle(fontSize: 14),
-                        ),
+                        Text(item['inTime'], style: const TextStyle(fontSize: 14)),
                       ],
                     ),
                   if (item['outTime'] != null)
                     Row(
                       children: [
-                        const Icon(Icons.arrow_downward,
-                            color: Colors.red, size: 16),
+                        const Icon(Icons.arrow_downward, color: Colors.red, size: 16),
                         const SizedBox(width: 4),
-                        Text(
-                          item['outTime'],
-                          style: const TextStyle(fontSize: 14),
-                        ),
+                        Text(item['outTime'], style: const TextStyle(fontSize: 14)),
                       ],
                     ),
                   if (item['status'].isNotEmpty)
                     Container(
                       margin: const EdgeInsets.only(top: 4),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 8, vertical: 4),
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                       decoration: BoxDecoration(
                         color: item['statusColor'],
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Text(
                         item['status'],
-                        style:
-                            const TextStyle(color: Colors.white, fontSize: 12),
+                        style: const TextStyle(color: Colors.white, fontSize: 12),
                       ),
                     ),
                 ],
               ),
-              trailing: const Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  // Timesheet Icon
-                  Icon(Icons.calendar_today,
-                      color: Color.fromRGBO(0, 35, 75, 1),
-                      size: 25), // Calendar with rgba(0, 35, 75, 1)
-                  SizedBox(width: 16),
-                  // Location Icon
-                  Icon(Icons.location_on,
-                      color: Color.fromRGBO(98, 77, 227, 1),
-                      size: 25), // Location with rgba(98, 77, 227, 1)
-                ],
-              ),
-              contentPadding:
-                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+              
+              trailing: Row(
+  mainAxisSize: MainAxisSize.min,
+  children: [
+    IconButton(
+      icon: const Icon(Icons.calendar_today, color: Colors.black),
+      onPressed: () {
+        // Action for calendar icon
+      },
+    ),
+    const SizedBox(width: 8), // Add spacing between icons
+    IconButton(
+      icon: const Icon(Icons.location_on, color: Colors.blue),
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => LiveLocationScreen(
+              name: item['name'],
+              latitude: item['latitude'],
+              longitude: item['longitude'],
             ),
-            // Grey line separator between list items
-            const Divider(
-              color: Colors.grey, // Line color
-              height: 1, // Line thickness
-              thickness: 1, // Line thickness
-              indent: 16, // Indentation from the left
-              endIndent: 16, // Indentation from the right
+          ),
+        );
+      },
+    ),
+  ],
+),
             ),
+
+            const Divider(color: Colors.grey, height: 1, thickness: 1, indent: 16, endIndent: 16),
           ],
         );
       },
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-// onPressed: () {
-//                 Navigator.push(
-//                   context,
-//                   MaterialPageRoute(
-//                     builder: (context) => LocationDetailsScreen(memberId: item['id']),
-//                   ),
-//                 );
-//               },
-
-
-
-//               onTap: () {
-//                 // Navigate to the location screen
-//                 Navigator.push(
-//                   context,
-//                   MaterialPageRoute(
-//                     builder: (context) => LocationScreen(
-//                       name: item['name'],
-//                       latitude: item['latitude'],
-//                       longitude: item['longitude'],
-//                     ),
-//                   ),
-//                 );
-//               },

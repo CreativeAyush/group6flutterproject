@@ -1,10 +1,9 @@
-2024/11/28-20:30:28.209 5060 Log #3: 3 ops saved to Table #7 OK
-2024/11/28-20:30:28.216 5060 Archiving C:\Users\pcmwa\AppData\Local\Temp\flutter_tools.c1d6bb79\flutter_tools_chrome_device.abd92be\Default\Site Characteristics Database/000003.log: OK
-2024/11/28-20:30:28.218 5060 Log #6: 2 ops saved to Table #8 OK
-2024/11/28-20:30:28.220 5060 Archiving C:\Users\pcmwa\AppData\Local\Temp\flutter_tools.c1d6bb79\flutter_tools_chrome_device.abd92be\Default\Site Characteristics Database/000006.log: OK
-2024/11/28-20:30:28.221 5060 Table #4: 3 entries OK
-2024/11/28-20:30:28.221 5060 Table #6: 3 entries OK
-2024/11/28-20:30:28.221 5060 Table #7: 3 entries OK
-2024/11/28-20:30:28.221 5060 Table #8: 2 entries OK
-2024/11/28-20:30:28.230 5060 Archiving C:\Users\pcmwa\AppData\Local\Temp\flutter_tools.c1d6bb79\flutter_tools_chrome_device.abd92be\Default\Site Characteristics Database/MANIFEST-000001: OK
-2024/11/28-20:30:28.254 5060 **** Repaired leveldb C:\Users\pcmwa\AppData\Local\Temp\flutter_tools.c1d6bb79\flutter_tools_chrome_device.abd92be\Default\Site Characteristics Database; recovered 4 files; 874 bytes. Some data may have been lost. ****
+2024/11/28-20:30:28.265 5060 Reusing MANIFEST C:\Users\pcmwa\AppData\Local\Temp\flutter_tools.c1d6bb79\flutter_tools_chrome_device.abd92be\Default\Site Characteristics Database/MANIFEST-000001
+2024/11/28-20:30:28.273 51e8 Compacting 4@0 + 0@1 files
+2024/11/28-20:30:28.283 51e8 Generated table #11@0: 2 keys, 194 bytes
+2024/11/28-20:30:28.284 51e8 Compacted 4@0 + 0@1 files => 194 bytes
+2024/11/28-20:30:28.285 51e8 compacted to: files[ 0 1 0 0 0 0 0 ]
+2024/11/28-20:30:28.286 51e8 Delete type=2 #4
+2024/11/28-20:30:28.286 51e8 Delete type=2 #6
+2024/11/28-20:30:28.286 51e8 Delete type=2 #7
+2024/11/28-20:30:28.286 51e8 Delete type=2 #8
